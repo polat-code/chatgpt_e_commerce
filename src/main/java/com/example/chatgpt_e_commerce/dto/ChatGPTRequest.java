@@ -11,10 +11,11 @@ public class ChatGPTRequest {
 
     private String model;
     private List<Message> messages;
-
+    private Double temperature;
     public ChatGPTRequest(String model, String prompt) {
         this.model = model;
         this.messages = new ArrayList<>();
         this.messages.add(new Message("user",prompt));
+        this.temperature = 0.0;
     }
 }
